@@ -1,3 +1,4 @@
+import React, { Component } from 'react'
 import { useState } from "react"
 import styles from "./style.module.css"
 import PropTypes from "prop-types"

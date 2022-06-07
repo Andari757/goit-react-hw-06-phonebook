@@ -1,9 +1,11 @@
+import React, { Component } from 'react'
 import { useState, useEffect, useRef } from 'react'
-import { nanoid } from 'nanoid'
-import ContactForm from "components/ContactForm/ContactForm"
-import ContactList from "components/ContactList/ContactList"
-import Filter from "components/Filter/Filter"
 
+import { nanoid } from 'nanoid'
+import ContactList from 'components/ContactList/ContactList';
+import ContactForm from 'components/ContactForm/ContactForm';
+import Filter from "components/Filter/Filter"
+console.log(ContactList)
 export function App() {
   const [contacts, setContacts] = useState([])
   const [filter, setFilter] = useState("");
@@ -14,16 +16,16 @@ export function App() {
   //   if (!data?.length) return
   //   setContacts(data)
   // }, [])
-  useEffect(() => {
-    if (one.current) {
-      const data = JSON.parse(localStorage.getItem("contacts"))
-      if (data?.length) setContacts(data);
-      one.current = false;
-    }
-    else {
-      localStorage.setItem("contacts", JSON.stringify(contacts))
-    }
-  }, [contacts])
+  // useEffect(() => {
+  //   if (one.current) {
+  //     const data = JSON.parse(localStorage.getItem("contacts"))
+  //     if (data?.length) setContacts(data);
+  //     one.current = false;
+  //   }
+  //   else {
+  //     localStorage.setItem("contacts", JSON.stringify(contacts))
+  //   }
+  // }, [contacts])
   // useEffect(() => {
   //   if (one.current) {
   //     one.current = false;

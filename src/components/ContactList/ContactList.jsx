@@ -1,6 +1,8 @@
 import ListItem from "./ListItem/ListItem"
 import PropTypes from 'prop-types';
 import styles from "./style.module.css"
+import React, { Component } from 'react';
+
 export default function ContactList({ contacts, onClick }) {
     return (
         <ul className={styles.list}>
