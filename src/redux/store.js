@@ -12,17 +12,16 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import reducer from "./slice";
-
 const persistConfig = {
     key: 'root',
     storage,
 }
 
-// const rootReducer = combineReducers({
-//     contacts: reducer,
-// });
+const rootReducer = combineReducers({
+    contacts: reducer,
+});
 
-const persistedReducer = persistReducer(persistConfig, reducer);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
     reducer: persistedReducer,
